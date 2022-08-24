@@ -1,0 +1,31 @@
+[
+  {
+    "path": "posts/2022-08-24-plotting-interactive-visualizations-with-plotly-in-r/",
+    "title": "Plotly R Open Source Graphing Library",
+    "description": "Plotly's R graphing library makes interactive, publication-quality graphs. Examples of how to make line plots, scatter plots, area charts, bar charts, error bars, box plots, histograms, heatmaps, subplots, multiple-axes, and 3D (WebGL based) charts.",
+    "author": [],
+    "date": "2022-08-24",
+    "categories": [],
+    "contents": "\n“Plotly R Open Source Graphing Library” \nMapbox Choropleth Maps in R\n\n\n\n3D Surface Plots in R ##volcano is a numeric matrix that\nships with R\n\n\n\nSlider Controls\n\n\n\n5. Animations\n\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-08-24T23:16:29+03:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to R.journey From Zero To Hero",
+    "description": "This personal project isn’t something revolutionary nor is it something that has never been done before; it’s simply a testament to the importance of having a solid purpose when venturing into an unknown domain that will present you with challenges you aren’t used to facing.",
+    "author": [
+      {
+        "name": "AZZA ABDULLAH S. ALGHAMDI",
+        "url": "https://github.com/Azza3bdullah/R.journey-From-Zero-To-Hero.git"
+      }
+    ],
+    "date": "2022-08-23",
+    "categories": [],
+    "contents": "\nR.journey From Zero To Hero\n\nThere are very few (if any) fields today that aren’t impacted in\nsome way, shape or form by programming. Programming is a term that’s\nbasically synonymous with technology and what professional field today\ndoesn’t employ some form of technology? The ability to code has become\none of those skills that open up an incredible number of doors if you\npossess it and it’s this fact that led me to venture into the world of\nR– one of many programming languages– to simply explore it and see what\nI could learn. I wanted to write this article not to convince people to\npick up coding as a skill (although it’s great) but more as a\ndocumentation of my journey in learning a new skill and how important\nhaving an actual purpose for something like this can be, however small\nor niche.\nI officially started this journey just over a year ago and it’s\nimportant to note that I didn’t really start it with any specific goal\nin mind nor did I have any real notion of where I could apply this\nskill. In short, I had no purpose. Now, this wasn’t a problem initially\nbecause I guess you could say my purpose was just to learn the language\nbut even that in itself is incredibly vague and doesn’t provide a clear\nenough end point.\nIn 2022 I found the best course “from-Zero-to-hero-in-r” By Jeelaidm\nThis is a course designed by Batool Almarzouq and delivered in\nJeelAIDM\nWeek1: Introduction to R and RStudio\nWeek2: Introduction to Git/GitHub\nWeek3: First steps in the\ntidyverse\nWeek4: Introduction to ggplot2\nWeek5: Publishing R Markdown and Creating a blog with R\nMarkdown\nLearn How to Join with R Communities (R-Ladies, Open Science\nCommunity Saudi Arabia, R-Ladies Saudi Arabia (Dammam)\n\nIt has been a long journey but it made my summer much more\ninteresting. 💕\nLearned a lot and enjoyed every single minute. 💟 Never Stop learning\nwith JeelAIDM\nWe greatful to Dr. Batool Almarzouq, your explaination was wonderful\nthroughout the course… I really loved it♥️\nLooking forward to learn more from you…💟\nThanks ALL for this wonderful opportunity 🙌\n\n\n\n\n",
+    "preview": "posts/welcome/distill-preview.png",
+    "last_modified": "2022-08-25T01:01:16+03:00",
+    "input_file": {}
+  }
+]

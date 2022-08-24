@@ -1,0 +1,222 @@
+---
+title: "Plotly R Open Source Graphing Library"
+description: |
+  Plotly's R graphing library makes interactive, publication-quality graphs. Examples of how to make line plots, scatter plots, area charts, bar charts, error bars, box plots, histograms, heatmaps, subplots, multiple-axes, and 3D (WebGL based) charts.
+url: https://plotly.com/r/
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+**"Plotly R Open Source Graphing Library" ![](Plotly%20R%20.jpg)**
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+1.  **Mapbox Choropleth Maps in R**
+
+```{r}
+library(plotly)
+library(rjson)
+
+url <- 'https://raw.githubusercontent.com/plotly/datasets/master/election.geojson'
+geojson <- rjson::fromJSON(file=url)
+url2<- "https://raw.githubusercontent.com/plotly/datasets/master/election.csv"
+df <- read.csv(url2)
+g <- list(
+  fitbounds = "locations",
+  visible = FALSE
+)
+fig <- plot_ly() 
+fig <- fig %>% add_trace(
+    type="choroplethmapbox",
+    geojson=geojson,
+    locations=df$district,
+    z=df$Bergeron,
+    colorscale="Viridis",
+    featureidkey="properties.district"
+  )
+fig <- fig %>% colorbar(title = "Bergeron Votes")
+fig <- fig %>% layout(
+    mapbox=list(
+      style="carto-positron",
+      zoom =9,
+      center=list(lon=-73.7073, lat=45.5517))
+  )
+fig
+
+```
+
+2.  **3D Surface Plots in R ##volcano is a numeric matrix that ships with R**
+
+```{r}
+library(plotly)
+# volcano is a numeric matrix that ships with R
+fig <- plot_ly(z = ~volcano) %>% add_surface(
+  contours = list(
+    z = list(
+      show=TRUE,
+      usecolormap=TRUE,
+      highlightcolor="#ff0000",
+      project=list(z=TRUE)
+      )
+    )
+  )
+fig <- fig %>% layout(
+    scene = list(
+      camera=list(
+        eye = list(x=1.87, y=0.88, z=-0.64)
+        )
+      )
+  )
+
+fig
+
+```
+
+4.  **Slider Controls**
+
+```{r}
+library(plotly)
+
+df <- read.csv('https://raw.githubusercontent.com/plotly/datasets/master/globe_contours.csv')
+df$id <- seq_len(nrow(df))
+
+library(tidyr)
+d <- df %>%
+  gather(key, value, -id) %>%
+  separate(key, c("l", "line"), "\\.") %>%
+  spread(l, value)
+
+geo <- list(
+  showland = TRUE,
+  showlakes = TRUE,
+  showcountries = TRUE,
+  showocean = TRUE,
+  countrywidth = 0.5,
+  landcolor = 'rgb(230, 145, 56)',
+  lakecolor = 'rgb(0, 255, 255)',
+  oceancolor = 'rgb(0, 255, 255)',
+  projection = list(
+    type = 'orthographic',
+    rotation = list(
+      lon = -100,
+      lat = 40,
+      roll = 0
+    )
+  ),
+  lonaxis = list(
+    showgrid = TRUE,
+    gridcolor = toRGB("gray40"),
+    gridwidth = 0.5
+  ),
+  lataxis = list(
+    showgrid = TRUE,
+    gridcolor = toRGB("gray40"),
+    gridwidth = 0.5
+  )
+)
+
+## add custom events
+
+# dropdown
+projections = data.frame(type = c("equirectangular", "mercator", "orthographic", "natural earth","kavrayskiy7", 
+                                  "miller", "robinson", "eckert4", "azimuthal equal area","azimuthal equidistant", 
+                                  "conic equal area", "conic conformal", "conic equidistant", "gnomonic", "stereographic", 
+                                  "mollweide", "hammer", "transverse mercator", "albers usa", "winkel tripel"))
+
+all_buttons <- list()
+for (i in 1:length(projections[,])) { 
+  all_buttons[[i]] <- list(method = "relayout",
+                           args = list(list(geo.projection.type = projections$type[i])),
+                           label = projections$type[i])
+}
+
+# sliders
+lon_range = data.frame(seq(-180, 180, 10))
+lat_range = data.frame(seq(-90, 90, 10))
+colnames(lon_range) <- "x"
+colnames(lat_range) <- "x"
+
+all_lat <- list()
+for (i in 1:length(lat_range[,])) { 
+  all_lat[[i]] <- list(method = "relayout",
+                       args = list(list(geo.projection.rotation.lat = lat_range$x[i])),
+                       label = lat_range$x[i])
+}
+
+all_lon <- list()
+for (i in 1:length(lon_range[,])) {  
+  all_lon[[i]] <- list(method = "relayout", 
+                       args = list(list(geo.projection.rotation.lon = lon_range$x[i])),
+                       label = lon_range$x[i]) 
+} 
+
+# annotations
+annot <- list(x = 0, y=0.8, text = "Projection", yanchor = 'bottom', 
+              xref = 'paper', xanchor = 'right',
+              showarrow = FALSE)
+
+
+# original d3-globe with contours
+fig<- plot_geo(d) 
+fig <- fig %>% group_by(line) 
+fig <- fig %>% add_lines(x = ~lon, y = ~lat, color = ~line, colors = 'Reds') 
+fig <- fig %>% layout(
+  showlegend = FALSE, geo = geo
+)
+
+# plot with custom events
+fig<- fig
+fig <- fig %>% layout(annotations = annot,
+                      updatemenus = list(list(active = 2, x = 0, y = 0.8, 
+                                              buttons=all_buttons)),
+                      sliders = list(
+
+                        list(
+                          active = (length(lon_range[,])-1)/2, 
+                          currentvalue = list(prefix = "Longitude: "), 
+                          pad = list(t = 20), 
+
+                          steps = all_lon),
+
+                        list(
+                          active = (length(lat_range[,])-1)/2, 
+                          currentvalue = list(prefix = "Latitude: "), 
+                          pad = list(t = 100), 
+
+                          steps = all_lat)))
+
+fig
+
+```
+
+**5. Animations**
+
+```{r}
+library(plotly)
+library(gapminder)
+
+df <- gapminder 
+fig <- df %>%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+  )
+fig <- fig %>% layout(
+    xaxis = list(
+      type = "log"
+    )
+  )
+
+fig
+
+```

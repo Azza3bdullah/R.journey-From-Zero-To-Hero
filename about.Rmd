@@ -1,0 +1,37 @@
+---
+title: "AZZA ABDULLAH S. ALGHAMDI"
+image: "az.jpg"
+links:
+  - label: GitHub
+    url: "https://github.com/Azza3bdullah"
+  - label: Twitter
+    url: "https://twitter.com/Azza_0"
+  - label: Email
+    url: "mailto:email@email.com"
+output:
+  postcards::trestles
+---
+
+## Bio
+
+👋 Hi, I'm Azza 👀 I'm interested in AIED 🔭 I'm currently working on Research 🌱 I'm currently learning AIED 👯 I'm looking to collaborate on AI Researchers 🤔 I'm looking for help with AI Community 💬 Ask me about AIED 📫 How to reach me: on e-mail 😄 Pronouns: (She) ⚡ Fun fact: Research & innovation
+
+![](istockphoto-1202870693-612x612.jpeg){width="312"}
+
+## Experience
+
+Senior eLearning Specialist with Experience in developing and delivers online courses. My research spans several different areas involving develop knowledge in curriculum development, design, and delivery courses via Technology and The Impact of Artificial Intelligence on Learning, Teaching. I spend part of my time developing AI in the community a role I'm passionate about. I believe that interesting applications in AI inspire and motivate people to learn more.
+
+## Education
+
+**Ph.D. in eLearning** \|
+
+**MS. In information and Communication Technology** \|
+
+**BA. In English Language** \|
+
+------------------------------------------------------------------------
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```

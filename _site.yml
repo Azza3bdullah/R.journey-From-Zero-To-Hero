@@ -1,0 +1,12 @@
+name: "R.journey From Zero To Hero"
+title: "R.journey From Zero To Hero"
+description: |
+  This personal project isn’t something revolutionary nor is it something that has never been done before; it’s simply a testament to the importance of having a solid purpose when venturing into an unknown domain that will present you with challenges you aren’t used to facing.
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article

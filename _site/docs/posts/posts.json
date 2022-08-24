@@ -1,0 +1,36 @@
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to R.journey From Zero To Hero",
+    "description": "This personal project isn’t something revolutionary nor is it something that has never been done before; it’s simply a testament to the importance of having a solid purpose when venturing into an unknown domain that will present you with challenges you aren’t used to facing.",
+    "author": [
+      {
+        "name": "AZZA ABDULLAH S. ALGHAMDI",
+        "url": "https://github.com/Azza3bdullah/R.journey-From-Zero-To-Hero.git"
+      }
+    ],
+    "date": "2022-08-23",
+    "categories": [],
+    "contents": "\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-08-23T23:42:36+03:00",
+    "input_file": "welcome.knit.md"
+  },
+  {
+    "path": "posts/2022-08-23-rjourney-from-zero-to-hero/",
+    "title": "R.journey From Zero To Hero",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "AZZA ABDULLAH S. ALGHAMDI",
+        "url": "https://github.com/Azza3bdullah/R.journey-From-Zero-To-Hero.git"
+      }
+    ],
+    "date": "2022-08-23",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing,\nnative to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-08-23T23:47:02+03:00",
+    "input_file": "rjourney-from-zero-to-hero.knit.md"
+  }
+]
