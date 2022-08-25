@@ -14,7 +14,21 @@ output:
 
 ## Bio
 
-👋 Hi, I'm Azza 👀 I'm interested in AIED 🔭 I'm currently working on Research 🌱 I'm currently learning AIED 👯 I'm looking to collaborate on AI Researchers 🤔 I'm looking for help with AI Community 💬 Ask me about AIED 📫 How to reach me: on e-mail 😄 Pronouns: (She) ⚡ Fun fact: Research & innovation
+👋 Hi, I'm Azza 👀 I'm interested in AIED 
+
+🔭 I'm currently working on Research 
+
+🌱 I'm currently learning AIED 
+
+👯 I'm looking to collaborate on AI Researchers 
+
+🤔 I'm looking for help with AI Community 
+
+💬 Ask me about AIED 
+
+📫 How to reach me: on e-mail 
+
+😄 Pronouns: (She) ⚡ Fun fact: Research & innovation
 
 ![](istockphoto-1202870693-612x612.jpeg){width="312"}
 
