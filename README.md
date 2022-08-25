@@ -12,5 +12,5 @@ The first blog is typically the hardest and I’ve lived through the uncertainty
 I also have owed this post to many people, namely Dr. Batool Almarzouq and JeelAIDM Team.
 
 # Post
-1. "Welcome to R.journey From Zero To Hero"
-2. "Plotly R Open Source Graphing Library"
+**1. "Welcome to R.journey From Zero To Hero"**
+**2. "Plotly R Open Source Graphing Library"**
